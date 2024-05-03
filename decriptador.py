@@ -1,3 +1,4 @@
+#Função para XOR e AND
 def XOR_AND(L0,Ki,R0):
 
     #AND de R0 com Ki retornando o valor para F
@@ -11,7 +12,7 @@ def XOR_AND(L0,Ki,R0):
         R1 += str(int(L0[i]) ^ int(F[i]))
         
     return R1
-
+#Função Geradora da subchave
 def gerador_de_subchave(R):
     Ki = R[1:] + R[0]
     return Ki
@@ -22,7 +23,7 @@ R0 = "1100"
 L0 = "0110"
 Ki = gerador_de_subchave(R0)
 
-
+#Segunda Vez
 L2 = XOR_AND(L0,Ki,R0)
 Ki1 = gerador_de_subchave(L2)
 R2 = XOR_AND(R0,Ki1,L2)
